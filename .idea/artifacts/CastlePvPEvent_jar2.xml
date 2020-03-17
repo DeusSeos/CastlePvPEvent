@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CastlePvPEvent:jar2">
+    <output-path>$USER_HOME$/Desktop/1.15.2 Server/Server/plugins</output-path>
+    <root id="archive" name="CastlePvPEvent.jar">
+      <element id="module-output" name="CastlePvPEvent" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/1.15.2 Server/Server/spigot-1.15.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

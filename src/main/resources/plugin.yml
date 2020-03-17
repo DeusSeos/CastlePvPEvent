@@ -1,0 +1,10 @@
+name: CastlePvPEvent
+version: ${project.version}
+main: seoss.castlepvpevent.CastlePvPEvent
+api-version: 1.13
+authors: [Seoss]
+commands:
+  castle:
+    description: Used for castle plugin.
+
+
