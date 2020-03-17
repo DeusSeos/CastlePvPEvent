@@ -13,7 +13,7 @@ public class SummonSheep {
 
 
     public Sheep sheep(World world){
-        Sheep castleSheep = plugin.world.spawn(plugin.sheeplocation, Sheep.class);
+        Sheep castleSheep = plugin.world.spawn(plugin.sheepLocation, Sheep.class);
         castleSheep.setBaby();
         castleSheep.setAgeLock(true);
         castleSheep.setCollidable(false);
