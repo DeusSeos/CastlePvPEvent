@@ -53,7 +53,7 @@ public class CastleCommands implements CommandExecutor {
                         plugin.isCastleRunning = true;
 
                     }
-                    plugin.sheepuuid = plugin.castleSheep.spawn(plugin.sheeplocationit).getUniqueId();
+                    plugin.sheepuuid = plugin.castleSheep.spawn(plugin.sheeplocation).getUniqueId();
                     plugin.sheepmaxhealth = ((LivingEntity)Bukkit.getEntity(plugin.sheepuuid)).getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue();
 
 
