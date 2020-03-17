@@ -24,12 +24,12 @@ public final class CastlePvPEvent extends JavaPlugin {
     //public ScoreboardManager scoreboardManager = Bukkit.getServer().getScoreboardManager();
     //public Scoreboard scoreboard = scoreboardManager.getMainScoreboard();
     public boolean isCastleRunning = false;
-    public UUID sheepuuid;
+    public UUID sheepUUID;
     public final int delay = 3;
     public World world;;
-    public Location sheeplocation;
+    public Location sheepLocation;
     public CustomEntityType castleSheep = new CustomEntityType<CustomSheep>("castle_sheep", CustomSheep.class, EntityTypes.SHEEP, CustomSheep::new);
-    public double sheepmaxhealth;
+    public double sheepMaxHealth;
 
     @Override
     public void onLoad(){
@@ -45,7 +45,7 @@ public final class CastlePvPEvent extends JavaPlugin {
         manager.registerEvents(new SheepDamaged(), this);
         this.getCommand("castle").setExecutor(new CastleCommands());
         world = Bukkit.getWorlds().get(0);
-        sheeplocation =  new Location(world, 151.5, 76.1, 184.5, 0, 0);
+        sheepLocation =  new Location(world, 151.5, 76.1, 184.5, 0, 0);
         scoreboardManager = Bukkit.getServer().getScoreboardManager();
         scoreboard = scoreboardManager.getNewScoreboard();
         // Plugin startup logic

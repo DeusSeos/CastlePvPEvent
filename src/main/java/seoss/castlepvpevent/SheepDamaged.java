@@ -19,7 +19,7 @@ public class SheepDamaged implements Listener {
         if (!plugin.isCastleRunning) {
         } else {
             Entity entitySheep = e.getEntity();
-            if (entitySheep.getUniqueId().equals((plugin.sheepuuid))) {
+            if (entitySheep.getUniqueId().equals((plugin.sheepUUID))) {
                 if (e.getCause().equals(EntityDamageEvent.DamageCause.ENTITY_EXPLOSION) ||
                         e.getCause().equals(EntityDamageEvent.DamageCause.LIGHTNING) ||
                         e.getCause().equals(EntityDamageEvent.DamageCause.MAGIC) ||
@@ -33,18 +33,18 @@ public class SheepDamaged implements Listener {
                 } else {
                     e.getEntity().setVelocity(new Vector(0.0,0.0,0.0));
                     Bukkit.getScheduler().runTaskLater(plugin, () -> e.getEntity().setVelocity(new Vector(0.0, 0.0, 0.0)), plugin.delay);
-                    Bukkit.getScheduler().runTaskLater(plugin, () -> e.getEntity().teleport(plugin.sheeplocation), plugin.delay);
+                    Bukkit.getScheduler().runTaskLater(plugin, () -> e.getEntity().teleport(plugin.sheepLocation), plugin.delay);
                     LivingEntity castleSheep = (LivingEntity) entitySheep;
-                    double currenthealth = castleSheep.getHealth();
-                    double healthbase = plugin.sheepmaxhealth/3.0;
+                    double currentHealth = castleSheep.getHealth();
+                    double healthBase = plugin.sheepMaxHealth/3.0;
 
-                    if (currenthealth < healthbase) {
+                    if (currentHealth < healthBase) {
                         castleSheep.setCustomName(ChatColor.RED + "Heart <3");
                     }
-                    else if (currenthealth >= healthbase && currenthealth < (healthbase*2)) {
+                    else if (currentHealth >= healthBase && currentHealth < (healthBase*2)) {
                         castleSheep.setCustomName(ChatColor.YELLOW + "Heart <3");
                     }
-                    else if (currenthealth > healthbase*2) {
+                    else if (currentHealth > healthBase*2) {
                         castleSheep.setCustomName(ChatColor.GREEN + "Heart <3");
                     }
                 }

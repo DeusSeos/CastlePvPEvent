@@ -30,7 +30,7 @@ public class CastleCommands implements CommandExecutor {
             else if (argLength >= 1){
                 if (args[0].equalsIgnoreCase("setup")){
                     modifyTeam.registerTeams(sender);
-                    plugin.sheepuuid = plugin.castleSheep.spawn(plugin.sheeplocation).getUniqueId();
+                    plugin.sheepUUID = plugin.castleSheep.spawn(plugin.sheepLocation).getUniqueId();
                 }
 
 
@@ -51,15 +51,13 @@ public class CastleCommands implements CommandExecutor {
                         sender.sendMessage(ChatColor.GREEN + "Countdown is already running");
                     } else {
                         plugin.isCastleRunning = true;
-
                     }
-                    plugin.sheepuuid = plugin.castleSheep.spawn(plugin.sheeplocation).getUniqueId();
-                    plugin.sheepmaxhealth = ((LivingEntity)Bukkit.getEntity(plugin.sheepuuid)).getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue();
+                    plugin.sheepUUID = plugin.castleSheep.spawn(plugin.sheepLocation).getUniqueId();
+                    plugin.sheepMaxHealth = ((LivingEntity)Bukkit.getEntity(plugin.sheepUUID)).getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue();
 
 
                 }else if (args[0].equalsIgnoreCase("end")){
                     plugin.isCastleRunning = false;
-
                 }
             }
         } else {

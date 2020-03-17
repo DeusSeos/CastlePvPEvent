@@ -20,7 +20,6 @@ public class CustomSheep extends EntitySheep {
     }
 
 
-
     public CustomSheep(EntityTypes<? extends EntitySheep> customSheepEntityTypes, World world) {
         this(world);
         this.collides = false;
